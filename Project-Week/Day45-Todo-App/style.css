@@ -1,0 +1,124 @@
+body {
+  background: #f5f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  transition: background 0.3s;
+}
+.todo-app {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2rem;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#todo-form {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#todo-input {
+  flex: 1;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+#todo-form button {
+  padding: 0.5rem 1rem;
+  border-radius: 0 8px 8px 0;
+  border: none;
+  background: #4f8cff;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+ul#todo-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0 0 1rem 0;
+}
+ul#todo-list li {
+  background: #f0f0f0;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ul#todo-list li.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+ul#todo-list button {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.filters button {
+  background: #e1e9f0;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+.filters button.active {
+  background: #4f8cff;
+  color: #fff;
+}
+#theme-toggle {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: #222;
+  color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+body.dark {
+  background: #222831;
+}
+body.dark .todo-app {
+  background: #393e46;
+  color: #eee;
+}
+body.dark #todo-input {
+  background: #23272f;
+  color: #fff;
+  border: 1px solid #444;
+}
+body.dark ul#todo-list li {
+  background: #23272f;
+  color: #eee;
+}
+body.dark .filters button {
+  background: #393e46;
+  color: #eee;
+}
+body.dark .filters button.active {
+  background: #00adb5;
+}
+body.dark #theme-toggle {
+  background: #fff;
+  color: #222;
+}
